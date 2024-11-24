@@ -10,6 +10,7 @@ This pipeline is designed for single-cell RNA sequencing (scRNA-seq) data analys
 - Create and analyze Seurat objects for clustering and visualization.
 
 ### Dependencies:
+- git
 - Nextflow (`=21.10.0`)
 - Singularity (`=3.5.2-1.1.el7`for containerized execution)
 - Software dependencies included in containers:
@@ -43,11 +44,14 @@ This pipeline is designed for single-cell RNA sequencing (scRNA-seq) data analys
 ---
 
 ### Running the Pipeline
-
-   ```bash
-   cd nextflow_501Project/
-   nextflow run nextflow_version.nf 
-   ```
+Go to the project directory
+```bash
+cd nextflow_501Project/
+```
+And run
+```bash
+nextflow run nextflow_version.nf 
+```
 
 ### Parameters
 
