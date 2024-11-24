@@ -189,7 +189,7 @@ The results in `result/` demonstrate the outputs of running the pipeline with th
   - These files are crucial for mapping reads to the genome efficiently.
  
 - **Seurat Object**
-- **RDS File** (`result/seurat_obj_PCA.rds` and seurat_obj_UMAP.rds):
+- **RDS File** (`result/seurat_obj_PCA.rds` and `seurat_obj_UMAP.rds`):
   - Represents the preprocessed data in Seurat format. This file contains normalized data, variable features, PCA results, and clustering information.
   - This object is used for generating visualizations and further downstream analysis in R.
 
