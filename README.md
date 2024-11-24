@@ -29,7 +29,6 @@ This pipeline is designed for single-cell RNA sequencing (scRNA-seq) data analys
 1. Clone the repository:
    ```bash
    git clone https://github.com/RobinLi7/nextflow_501Project.git
-   cd nextflow_501Project/
    ```
    
 2. Make sure Nextflow is installed.\
