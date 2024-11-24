@@ -87,11 +87,12 @@ The pipeline processes **10x Genomics scRNA-seq data** and requires the followin
 
 - **Subsampling Command**: The following `seqtk` command was used to randomly sample 2,000,000 reads from the original FASTQ file:
   ```bash
-  seqtk sample -s777 /projects/rli_prj/CPSC501/project/data/pbmc_1k_v3_S1_L001_R1_001.fastq.gz 2000000 > /projects/rli_prj/CPSC501/project/data/genome_1.fastq
+  seqtk sample -s777 data/pbmc_1k_v3_S1_L001_R1_001.fastq.gz 2000000 > data/genome_1.fastq
+  seqtk sample -s777 data/pbmc_1k_v3_S1_L001_R2_001.fastq.gz 2000000 > data/genome_2.fastq
   ```
   - **`-s777`**: Sets the random seed for reproducibility.
   - **`2000000`**: Specifies the number of reads to sample.
-  - The resulting file `genome_1.fastq` is included in the `data` folder for this pipeline.
+  - The resulting file `genome_1.fastq` and `genome_1.fastq` is included in the `data` folder for this pipeline.
 
 ### 2. **Genome Files**
 The pipeline uses a subset of the human genome as a reference, specifically the chromosomes `chr1`, `chr2`, and `chr3`. These files include:
