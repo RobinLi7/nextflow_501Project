@@ -138,4 +138,18 @@ The pipeline uses a subset of the human genome as a reference, specifically the 
 
 ---
 
+## Output for FULL STAR index
+In addition to the results generated using the subset STAR index (chr1, chr2, chr3), the pipeline has been tested using the **full STAR genome index** to demonstrate its capability for comprehensive analysis. These results are stored in the directory `result_full_ref/` and reflect alignment and quantification based on the entire genome reference. 
+
+- **Quality Control** (`result_full_ref/multiQC_report.html`):
+  - A HTML file that visualize base quality scores, GC content, sequence length distribution, sequence duplication levels, k-mer over-representation and contamination of primers and adapters in the input fastq.
+
+- **Visualizations**:
+  - **UMAP plot** (`result_full_ref/umap_plot.png`).
+  - Displays the clusters of single cells in a 2D space, based on the UMAP dimensionality reduction algorithm. Each cluster is labeled with its assigned identity.
+    ![UMAP](result_full_ref/umap_plot.png)
+  - **PCA plot** (`result_full_ref/pca_plot.png`).
+  - Visualizes the principal components of the data, showing variance explained by each component and how the cells cluster in this reduced-dimensional space.
+    ![PCA](result_full_ref/pca_plot.png)
+
 
