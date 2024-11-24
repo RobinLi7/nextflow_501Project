@@ -222,8 +222,6 @@ In addition to the results generated using the subset STAR index (chr1, chr2, ch
 ---
 
 ## Reference
-Certainly! Here are the formal references for the tools you've mentioned:
-
 1. Kaminow, B., Yunusov, D., & Dobin, A. (2021). STARsolo: accurate, fast and versatile mapping/quantification of single-cell and single-nucleus RNA-seq data. *bioRxiv*. https://doi.org/10.1101/2021.05.05.442755 
 2. Andrews, S. (2010). FastQC: A Quality Control tool for High Throughput Sequence Data. Available online: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ 
 3. Ewels, P., Magnusson, M., Lundin, S., & Käller, M. (2016). MultiQC: summarize analysis results for multiple tools and samples in a single report. *Bioinformatics*, 32(19), 3047–3048. https://doi.org/10.1093/bioinformatics/btw354 
