@@ -118,7 +118,7 @@ nextflow run nextflow_version.nf
 
 ---
 
-### Updated Input Explanation
+### Input
 
 The pipeline processes **10x Genomics scRNA-seq data** and requires the following input data:
 
