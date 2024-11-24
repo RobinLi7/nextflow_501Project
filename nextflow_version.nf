@@ -38,20 +38,33 @@ process download {
 
     script:
     """
-    mkdir -p "ref/"
-    wget -O ${ref_dir}/CellRanger/3M-february-2018.txt.gz https://github.com/noamteyssier/10x_whitelist_mirror/raw/main/3M-february-2018.txt.gz
+    mkdir -p "${projectDir}/ref"
+    mkdir -p "${projectDir}/ref/CellRanger"
+    curl -L -o ${ref_dir}/CellRanger/3M-february-2018.txt.gz https://github.com/noamteyssier/10x_whitelist_mirror/raw/main/3M-february-2018.txt.gz
+    curl -L -o ${ref_dir}/chr1.fa.gz http://hgdownload.cse.ucsc.edu/goldenPath/hg38/chromosomes/chr1.fa.gz
+    curl -L -o ${ref_dir}/chr2.fa.gz http://hgdownload.cse.ucsc.edu/goldenPath/hg38/chromosomes/chr2.fa.gz
+    curl -L -o ${ref_dir}/chr3.fa.gz http://hgdownload.cse.ucsc.edu/goldenPath/hg38/chromosomes/chr3.fa.gz
+    curl -L -o ${ref_dir}/gencode.v38.annotation.gtf.gz https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_38/gencode.v38.annotation.gtf.gz
+    """
+}
+
+process prep_ref_dir {
+    input:
+    path ref_dir
+
+    output:
+    path("ref")
+
+    script:
+    """
     gunzip -f ${ref_dir}/CellRanger/3M-february-2018.txt.gz
-    wget -O ${ref_dir}/chr1.fa.gz http://hgdownload.cse.ucsc.edu/goldenPath/hg38/chromosomes/chr1.fa.gz
-    wget -O ${ref_dir}/chr2.fa.gz http://hgdownload.cse.ucsc.edu/goldenPath/hg38/chromosomes/chr2.fa.gz
-    wget -O ${ref_dir}/chr3.fa.gz http://hgdownload.cse.ucsc.edu/goldenPath/hg38/chromosomes/chr3.fa.gz
-    wget -O ${ref_dir}/gencode.v38.annotation.gtf.gz https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_38/gencode.v38.annotation.gtf.gz 
     gunzip -f ${ref_dir}/chr*.fa.gz
     gunzip -f ${ref_dir}/*.gtf.gz
     grep -P '^chr1\t|^chr2\t|^chr3\t' ${ref_dir}/gencode.v38.annotation.gtf > ${ref_dir}/chr1_chr2_chr3.gtf
     """
 }
 
-process ref_prep {
+process gen_Generate {
     // publishDir params.genome_dir, mode:'copy'
 
     input:
@@ -176,8 +189,9 @@ workflow {
     MULTIQC(FASTQC_ch)
 
     ref_raw_path = download(params.ref_dir)
+    ref_raw_path_2 = prep_ref_dir(ref_raw_path)
 
-    ref_path = ref_prep(ref_raw_path, params.genome_dir, params.GTF_FILE, params.threads)
+    ref_path = gen_Generate(ref_raw_path_2, params.genome_dir, params.GTF_FILE, params.threads)
 
     STARsolo_ch = STARsolo(fastq_files_ch, ref_path, params.whitelist, params.output_dir, params.threads)
     // STARsolo_ch = STARsolo(fastq_files_ch, "/projects/rli_prj/large_files/STAR_genomeDir", params.whitelist, params.output_dir, params.threads)
