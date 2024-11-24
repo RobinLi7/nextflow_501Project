@@ -49,19 +49,19 @@ By integrating PCA and UMAP, the pipeline effectively simplifies complex scRNA-s
    - These files provide the raw sequencing data and metadata required for downstream analysis.
 
 #### **Quality Control**
-   - Runs **FastQC** [2] to assess sequencing quality and aggregates results using **MultiQC**.
+   - Runs **FastQC** [2] to assess sequencing quality and aggregates results using **MultiQC** [3].
    - Ensures the integrity of sequencing data before alignment and quantification.
 
 #### **Reference Genome Indexing**
-   - Uses **STAR** to create genome indices for alignment.
+   - Uses **STAR** [4] to create genome indices for alignment.
    - Prepares the reference genome for efficient alignment of sequencing reads.
 
 #### **Alignment and Quantification**
-   - Aligns sequencing reads to the genome using **STARsolo** and quantifies gene expression.
+   - Aligns sequencing reads to the genome using **STARsolo** [1] and quantifies gene expression.
    - Maps reads to the genome and generates raw gene expression matrices for downstream analysis.
 
 #### **Downstream Analysis with Seurat**
-   - Processes the gene expression matrix using R scripts with **Seurat** to perform normalization, dimensionality reduction, and clustering.
+   - Processes the gene expression matrix using R scripts with **Seurat** [5] to perform normalization, dimensionality reduction, and clustering.
    - Extracts meaningful biological information, such as cell clusters and marker genes.
 
 #### **Visualization**
