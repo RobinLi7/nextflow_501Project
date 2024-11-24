@@ -49,7 +49,7 @@ By integrating PCA and UMAP, the pipeline effectively simplifies complex scRNA-s
    - These files provide the raw sequencing data and metadata required for downstream analysis.
 
 #### **Quality Control**
-   - Runs **FastQC** to assess sequencing quality and aggregates results using **MultiQC**.
+   - Runs **FastQC** [2] to assess sequencing quality and aggregates results using **MultiQC**.
    - Ensures the integrity of sequencing data before alignment and quantification.
 
 #### **Reference Genome Indexing**
