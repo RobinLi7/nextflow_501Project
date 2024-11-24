@@ -25,27 +25,27 @@ This pipeline is designed for 10x Genomics single-cell RNA sequencing (scRNA-seq
 ### DAG
 ![DAG](DAG.png)
 
-#### Input Data Preparation**
+#### **Input Data Preparation**
    - Accepts FASTQ files from 10x Genomics experiments, a barcode whitelist, and a reference genome.
    - These files provide the raw sequencing data and metadata required for downstream analysis.
 
-#### Quality Control**
+#### **Quality Control**
    - Runs **FastQC** to assess sequencing quality and aggregates results using **MultiQC**.
    - Ensures the integrity of sequencing data before alignment and quantification.
 
-#### Reference Genome Indexing**
+#### **Reference Genome Indexing**
    - Uses **STAR** to create genome indices for alignment.
    - Prepares the reference genome for efficient alignment of sequencing reads.
 
-#### Alignment and Quantification**
+#### **Alignment and Quantification**
    - Aligns sequencing reads to the genome using **STARsolo** and quantifies gene expression.
    - Maps reads to the genome and generates raw gene expression matrices for downstream analysis.
 
-#### Downstream Analysis with Seurat**
+#### **Downstream Analysis with Seurat**
    - Processes the gene expression matrix using R scripts with **Seurat** to perform normalization, dimensionality reduction, and clustering.
    - Extracts meaningful biological information, such as cell clusters and marker genes.
 
-#### Visualization**
+#### **Visualization**
    - Generates plots for PCA and UMAP to visualize cell clustering.
    - Facilitates interpretation of single-cell data in reduced-dimensional space.
 
