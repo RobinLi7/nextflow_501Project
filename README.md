@@ -135,7 +135,4 @@ The pipeline uses a subset of the human genome as a reference, specifically the 
 
 ---
 
-## Notes
 
-- Ensure proper Singularity setup for containerized execution.
-- For any issues, please contact contributors listed in `nextflow.config`.
