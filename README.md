@@ -160,7 +160,7 @@ The subset STAR index, limited to chromosomes `chr1`, `chr2`, and `chr3`, is inc
 
 The results in `result/` demonstrate the outputs of running the pipeline with the subset STAR genome index.
 
-## Output
+## Expected Output
 
 - **Quality Control** (`result/multiQC_report.html`):
   - A HTML file that visualize base quality scores, GC content, sequence length distribution, sequence duplication levels, k-mer over-representation and contamination of primers and adapters in the input fastq.
