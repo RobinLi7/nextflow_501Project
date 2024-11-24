@@ -118,8 +118,6 @@ The pipeline uses a subset of the human genome as a reference, specifically the 
 
 ---
 
-## Output
-
 #### Reason for Using Subsection of STAR Index
 The subset STAR index, limited to chromosomes `chr1`, `chr2`, and `chr3`, is included in the pipeline for **testing and debugging purposes**. This approach significantly reduces the runtime and storage requirements, making it feasible to quickly validate the pipeline functionality. Key reasons for this choice are:
 
@@ -132,6 +130,8 @@ The subset STAR index, limited to chromosomes `chr1`, `chr2`, and `chr3`, is inc
    - The subset STAR index dramatically reduces storage usage, making it practical for environments with limited disk space.
 
 This dual approach ensures that users can validate the pipeline with minimal overhead using the subset genome while also providing the capability to perform a full analysis when needed for biologically meaningful results. The results in `result/` demonstrate the outputs of running the pipeline with the subset STAR genome index.
+
+## Output
 
 - **Quality Control** (`result/multiQC_report.html`):
   - A HTML file that visualize base quality scores, GC content, sequence length distribution, sequence duplication levels, k-mer over-representation and contamination of primers and adapters in the input fastq.
