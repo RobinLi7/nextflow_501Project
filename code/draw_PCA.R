@@ -53,3 +53,7 @@ pca_plot <- DimPlot(seurat_obj, reduction = "pca", label = TRUE) + NoLegend()
 # Save the PCA plot
 output_pca_file <- file.path(output_dir, "pca_plot.png")
 ggsave(output_pca_file, plot = pca_plot, width = 8, height = 6)
+
+# Save the Seurat object
+output_file <- file.path(output_dir, "seurat_obj_PCA.rds")
+saveRDS(seurat_obj, file = output_file)

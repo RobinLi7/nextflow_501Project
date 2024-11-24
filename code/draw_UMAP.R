@@ -47,3 +47,7 @@ umap_plot <- DimPlot(seurat_obj, reduction = "umap", label = TRUE) + NoLegend()
 # Save the UMAP plot
 output_umap_file <- file.path(output_dir, "umap_plot.png")
 ggsave(output_umap_file, plot = umap_plot, width = 8, height = 6)
+
+# Save the Seurat object
+output_file <- file.path(output_dir, "seurat_obj_UMAP.rds")
+saveRDS(seurat_obj, file = output_file)
