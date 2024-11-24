@@ -94,7 +94,3 @@ This pipeline is designed for single-cell RNA sequencing (scRNA-seq) data analys
 
 - Ensure proper Singularity setup for containerized execution.
 - For any issues, please contact contributors listed in `nextflow.config`.
-
---- 
-
-This README follows a structured approach to guide users in understanding and running your pipeline effectively. If you have further customizations, feel free to integrate them.
