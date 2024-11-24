@@ -30,10 +30,10 @@ This pipeline is designed for single-cell RNA sequencing (scRNA-seq) data analys
    cd nextflow_501Project/
    ```
    
-2. Make sure Nextflow is installed.\\
+2. Make sure Nextflow is installed.\
    [Installation guide](https://www.nextflow.io/docs/latest/install.html)
 
-4. Make sure Singularity is installed and configured.\\
+4. Make sure Singularity is installed and configured.\
    [Installation guide](https://docs.sylabs.io/guides/3.0/user-guide/installation.html)
    
 6. Download the reference genome files:
