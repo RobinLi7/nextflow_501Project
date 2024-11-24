@@ -21,6 +21,44 @@ This pipeline is designed for 10x Genomics single-cell RNA sequencing (scRNA-seq
 
 ### DAG
 ![DAG](DAG.png)
+
+#### **1. Input Data Preparation**
+   - **What**: Accepts FASTQ files from 10x Genomics experiments, a barcode whitelist, and a reference genome.
+   - **Why**: These files provide the raw sequencing data and metadata required for downstream analysis.
+   - **Step**:
+     - Subset STAR index (`chr1`, `chr2`, `chr3`) for faster testing.
+
+#### **2. Quality Control**
+   - **What**: Runs **FastQC** to assess sequencing quality and aggregates results using **MultiQC**.
+   - **Why**: Ensures the integrity of sequencing data before alignment and quantification.
+   - **Step**:
+     - Generate individual FastQC reports for each sample.
+     - Combine reports into a single MultiQC summary.
+
+#### **3. Reference Genome Indexing**
+   - **What**: Uses **STAR** to create genome indices for alignment.
+   - **Why**: Prepares the reference genome for efficient alignment of sequencing reads.
+
+#### **4. Alignment and Quantification**
+   - **What**: Aligns sequencing reads to the genome using **STARsolo** and quantifies gene expression.
+   - **Why**: Maps reads to the genome and generates raw gene expression matrices for downstream analysis.
+
+#### **5. Downstream Analysis with Seurat**
+   - **What**: Processes the gene expression matrix using R scripts with **Seurat** to perform normalization, dimensionality reduction, and clustering.
+   - **Why**: Extracts meaningful biological information, such as cell clusters and marker genes.
+   - **Step**:
+     - Create a Seurat object.
+     - Run PCA and UMAP for dimensionality reduction.
+     - Identify marker genes and cluster cells.
+
+#### **6. Visualization**
+   - **What**: Generates plots for PCA and UMAP to visualize cell clustering.
+   - **Why**: Facilitates interpretation of single-cell data in reduced-dimensional space.
+   - **Step**:
+     - UMAP plot: Clusters of cells in 2D space.
+     - PCA plot: Principal components of gene expression data.
+
+
 ---
 
 ## Usage
