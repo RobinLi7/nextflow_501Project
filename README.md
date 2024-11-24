@@ -45,15 +45,9 @@ This pipeline is designed for single-cell RNA sequencing (scRNA-seq) data analys
 
 ### Running the Pipeline
 
-1. Prepare input FASTQ files:
-   Organize paired-end FASTQ files in `data/` directory. Each pair should follow the naming convention `*_1.fastq.gz` and `*_2.fastq.gz`.
-
-2. Configure parameters:
-   Edit `nextflow.config` to specify the directories for input and output.
-
-3. Execute the pipeline:
    ```bash
-   nextflow run main.nf -params-file params.yaml
+   cd nextflow_501Project/
+   nextflow run nextflow_version.nf 
    ```
 
 ### Parameters
