@@ -130,10 +130,10 @@ The pipeline uses a subset of the human genome as a reference, specifically the 
 - **Visualizations**:
   - **UMAP plot** (`result/umap_plot.png`).
   - Displays the clusters of single cells in a 2D space, based on the UMAP dimensionality reduction algorithm. Each cluster is labeled with its assigned identity.
-  - ![UMAP](result/umap_plot.png)
+    ![UMAP](result/umap_plot.png)
   - **PCA plot** (`result/pca_plot.png`).
   - Visualizes the principal components of the data, showing variance explained by each component and how the cells cluster in this reduced-dimensional space.
-  - ![PCA](result/pca_plot.png)
+    ![PCA](result/pca_plot.png)
 
 ---
 
