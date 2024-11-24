@@ -107,16 +107,14 @@ The pipeline uses a subset of the human genome as a reference, specifically the 
 
 ### 3. **Barcode Whitelist**
 - A whitelist file is required for cell barcode validation during alignment. 
-- File: `3M-february-2018.txt`, provided by the Cell Ranger dataset.
+- File: `ref/CellRanger/3M-february-2018.txt`, provided by the Cell Ranger dataset.
 - It ensures that only valid cell barcodes are used in the downstream analysis.
 
 ### 4. **Optional Custom Inputs**
 - If users wish to expand the analysis to additional chromosomes or use a different reference genome, they need to replace the provided genome and annotation files with their own.
-- Modify the `GTF_FILE` and `genome_dir` parameters in `nextflow.config` to reflect the new files.
 
 ### Important Notes:
 - All genome and annotation files are downloaded and preprocessed automatically by the pipeline during execution.
-- Ensure that the input files are correctly named and formatted to avoid errors during processing.
 
 ---
 
