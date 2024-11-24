@@ -10,8 +10,8 @@ This pipeline is designed for single-cell RNA sequencing (scRNA-seq) data analys
 - Create and analyze Seurat objects for clustering and visualization.
 
 ### Dependencies:
-- Nextflow (`>=21.10.0`)
-- Singularity (for containerized execution)
+- Nextflow (`=21.10.0`)
+- Singularity (`=3.5.2-1.1.el7`for containerized execution)
 - Software dependencies included in containers:
   - **biocontainers/fastqc**
   - **ewels/multiqc**
