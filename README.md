@@ -89,7 +89,6 @@ By integrating PCA and UMAP, the pipeline effectively simplifies complex scRNA-s
 6. Download the reference genome files:\
    There is a `download` process in my Nextflow pipeline that will handle the downloads automatically.
 
----
 
 ### Running the Pipeline
 Go to the project directory
