@@ -55,12 +55,18 @@ nextflow run nextflow_version.nf
 
 ### Parameters
 
-| Parameter            | Description                                           | Example                                    |
-|----------------------|-------------------------------------------------------|--------------------------------------------|
-| `fastq_dir`          | Directory containing FASTQ files                     | `data/`                                    |
-| `output_dir`         | Directory for storing output files                   | `results/`                                 |
-| `genome_dir`         | Directory for storing genome files                   | `ref/STAR_genomeDir/`                      |
-| `threads`            | Number of threads for parallel execution             | `8`                                        |
+| Parameter            | Description                                               | Default Value                              |
+|-----------------------|-----------------------------------------------------------|-------------------------------------------|
+| `fastq_dir`          | Directory containing the input FASTQ files.                | `${projectDir}/data`                      |
+| `output_dir`         | Directory where the output files will be stored.           | `${projectDir}/result`                    |
+| `ref_dir`            | Directory for storing reference files.                     | `${projectDir}/ref`                       |
+| `GTF_FILE`           | Path to the GTF file for gene annotations.                 | `${projectDir}/ref/chr1_chr2_chr3.gtf`    |
+| `genome_dir`         | Directory containing the STAR genome index.                | `${projectDir}/ref/STAR_genomeDir`        |
+| `threads`            | Number of threads for parallel execution.                  | `8`                                       |
+| `whitelist`          | Path to the whitelist file used for cell barcodes.         | `${projectDir}/ref/CellRanger/3M-february-2018.txt` |
+| `seurat_obj_script`  | Path to the R script for creating Seurat objects.          | `${projectDir}/code/seurat_obj.R`         |
+| `UMAP_script`        | Path to the R script for generating UMAP plots.            | `${projectDir}/code/draw_UMAP.R`          |
+| `PCA_script`         | Path to the R script for generating PCA plots.             | `${projectDir}/code/draw_PCA.R`           |
 
 ---
 
