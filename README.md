@@ -70,12 +70,51 @@ nextflow run nextflow_version.nf
 
 ---
 
-## Input
+### Updated Input Explanation
 
-- **FASTQ files**: Paired-end sequencing reads named as `*_1.fastq.gz` and `*_2.fastq.gz`.
-- **Genome files**:
-  - Fasta files: `chr1.fa`, `chr2.fa`, `chr3.fa`.
-  - Annotation file: `gencode.v38.annotation.gtf`.
+The pipeline processes **10x Genomics scRNA-seq data** and requires the following input data:
+
+### 1. **FASTQ Files**
+- The input FASTQ files are generated from 10x Genomics platforms and follow this standard naming convention:
+  ```
+  pbmc_1k_v3_S1_L001_R1_001.fastq.gz
+  pbmc_1k_v3_S1_L001_R2_001.fastq.gz
+  ```
+  - **R1**: Contains the cell barcodes and unique molecular identifiers (UMIs).
+  - **R2**: Contains the actual RNA sequences for downstream analysis.
+
+- For demonstration purposes, this pipeline uses a **subsample** of the original data. The subsampling is performed to reduce computational resource usage while testing the pipeline. 
+
+- **Subsampling Command**: The following `seqtk` command was used to randomly sample 2,000,000 reads from the original FASTQ file:
+  ```bash
+  seqtk sample -s777 /projects/rli_prj/CPSC501/project/data/pbmc_1k_v3_S1_L001_R1_001.fastq.gz 2000000 > /projects/rli_prj/CPSC501/project/data/genome_1.fastq
+  ```
+  - **`-s777`**: Sets the random seed for reproducibility.
+  - **`2000000`**: Specifies the number of reads to sample.
+  - The resulting file `genome_1.fastq` is included in the `data` folder for this pipeline.
+
+### 2. **Genome Files**
+The pipeline uses a subset of the human genome as a reference, specifically the chromosomes `chr1`, `chr2`, and `chr3`. These files include:
+- **FASTA Files**: Contain the nucleotide sequences for the reference genome. The required files are:
+  - `chr1.fa`: Sequence for chromosome 1.
+  - `chr2.fa`: Sequence for chromosome 2.
+  - `chr3.fa`: Sequence for chromosome 3.
+- **Annotation File (GTF)**: Provides functional annotations of genes, including their locations on the genome and exon structures.
+  - File used: `gencode.v38.annotation.gtf`.
+  - This file is filtered to include annotations only for `chr1`, `chr2`, and `chr3`.
+
+### 3. **Barcode Whitelist**
+- A whitelist file is required for cell barcode validation during alignment. 
+- File: `3M-february-2018.txt`, provided by the Cell Ranger dataset.
+- It ensures that only valid cell barcodes are used in the downstream analysis.
+
+### 4. **Optional Custom Inputs**
+- If users wish to expand the analysis to additional chromosomes or use a different reference genome, they need to replace the provided genome and annotation files with their own.
+- Modify the `GTF_FILE` and `genome_dir` parameters in `nextflow.config` to reflect the new files.
+
+### Important Notes:
+- All genome and annotation files are downloaded and preprocessed automatically by the pipeline during execution.
+- Ensure that the input files are correctly named and formatted to avoid errors during processing.
 
 ---
 
