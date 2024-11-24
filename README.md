@@ -18,7 +18,7 @@ This pipeline is designed for single-cell RNA sequencing (scRNA-seq) data analys
   - **quay.io/biocontainers/star**
   - **satijalab/seurat**
 
-###DAG
+### DAG
 ![DAG](DAG.png)
 ---
 
