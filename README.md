@@ -129,7 +129,7 @@ The subset STAR index, limited to chromosomes `chr1`, `chr2`, and `chr3`, is inc
    - The full STAR genome index requires approximately **28GB of storage**.
    - The subset STAR index dramatically reduces storage usage, making it practical for environments with limited disk space.
 
-This dual approach ensures that users can validate the pipeline with minimal overhead using the subset genome while also providing the capability to perform a full analysis when needed for biologically meaningful results. The results in `result/` demonstrate the outputs of running the pipeline with the subset STAR genome index.
+The results in `result/` demonstrate the outputs of running the pipeline with the subset STAR genome index.
 
 ## Output
 
