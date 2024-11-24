@@ -33,11 +33,10 @@ This pipeline is designed for single-cell RNA sequencing (scRNA-seq) data analys
 2. Make sure Nextflow is installed.\
    [Installation guide](https://www.nextflow.io/docs/latest/install.html)
 
-4. Make sure Singularity is installed and configured.\
-   If you are using a BCGSC computer, there is no need for installation or configuration.\
+4. Make sure Singularity is installed and configured. If you are using a BCGSC computer, there is no need for installation or configuration.\
    [Installation guide](https://docs.sylabs.io/guides/3.0/user-guide/installation.html)
    
-6. Download the reference genome files:
+6. Download the reference genome files:\
    There is a `download` process in my Nextflow pipeline that will handle the downloads automatically.
 
 ---
