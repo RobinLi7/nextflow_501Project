@@ -83,7 +83,8 @@ By integrating PCA and UMAP, the pipeline effectively simplifies complex scRNA-s
 2. Make sure Nextflow (`=21.10.0`) is installed.\
    [Installation guide](https://www.nextflow.io/docs/latest/install.html)
 
-4. Make sure Singularity (`=3.5.2-1.1.el7`) is installed and configured. If you are using a BCGSC computer, there is no need for installation or configuration.\
+4. Make sure Singularity (`=3.5.2-1.1.el7`) is installed and configured.
+   If you are using a BCGSC computer, there is no need for installation or configuration.\
    [Installation guide](https://docs.sylabs.io/guides/3.0/user-guide/installation.html)
    
 6. Download the reference genome files:\
