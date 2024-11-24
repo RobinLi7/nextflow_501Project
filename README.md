@@ -29,18 +29,14 @@ This pipeline is designed for single-cell RNA sequencing (scRNA-seq) data analys
    git clone https://github.com/RobinLi7/nextflow_501Project.git
    cd nextflow_501Project/
    ```
+   
+2. Make sure Nextflow is installed.
+   [Installation guide](https://www.nextflow.io/docs/latest/install.html)
 
-2. Install **Nextflow**:
-   ```bash
-   curl -s https://get.nextflow.io | bash
-   ```
-
-3. Make sure Singularity is installed and configured:
-   ```bash
-   sudo apt-get install singularity
-   ```
-
-4. Download the reference genome files:
+4. Make sure Singularity is installed and configured.
+   [Installation guide](https://docs.sylabs.io/guides/3.0/user-guide/installation.html)
+   
+6. Download the reference genome files:
    Use the `download` process or manually run:
    ```bash
    curl -L -o ref/CellRanger/3M-february-2018.txt.gz https://github.com/noamteyssier/10x_whitelist_mirror/raw/main/3M-february-2018.txt.gz
