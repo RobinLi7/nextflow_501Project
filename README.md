@@ -1,4 +1,6 @@
 # nextflow_501Project
+## Author: [Junyu Li]
+
 
 ## Background and Rationale
 
