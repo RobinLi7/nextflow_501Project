@@ -5,7 +5,26 @@
 
 ## Background and Rationale
 
-This pipeline is designed for 10x Genomics single-cell RNA sequencing (scRNA-seq) data analysis. It uses **FastQC**, **MultiQC**, **STARsolo**, and **Seurat** to process, analyze, and visualize scRNA-seq data. Key features include quality control, genome generation, mapping, and downstream clustering analysis with visualization.
+In single-cell RNA sequencing (scRNA-seq) analysis, datasets often encompass thousands of genes across numerous cells, resulting in high-dimensional data that can be challenging to interpret. Dimensionality reduction techniques like Principal Component Analysis (PCA) and Uniform Manifold Approximation and Projection (UMAP) are essential for simplifying this complexity, enabling effective visualization and analysis.
+
+**Principal Component Analysis (PCA):**
+PCA is a linear method that identifies directions (principal components) capturing the maximum variance in the data. By projecting data onto these components, PCA reduces dimensionality while preserving significant variation, facilitating the identification of distinct cell populations. 
+
+**Uniform Manifold Approximation and Projection (UMAP):**
+UMAP is a nonlinear technique that preserves both local and global data structures during dimensionality reduction. It projects high-dimensional data into lower dimensions, maintaining relationships between data points, which is particularly useful for revealing complex cell population structures and developmental trajectories in scRNA-seq analysis. 
+
+**Rationale for Integration:**
+Incorporating PCA and UMAP into the scRNA-seq analysis pipeline addresses several key challenges:
+
+1. **Noise Reduction:** By focusing on principal components that capture the most variance, PCA helps mitigate the impact of technical noise inherent in scRNA-seq data.
+
+2. **Computational Efficiency:** Reducing dimensionality decreases computational demands, making downstream analyses like clustering more efficient.
+
+3. **Enhanced Visualization:** UMAP provides intuitive visualizations of complex data structures, aiding in the identification of cell clusters and relationships.
+
+By integrating PCA and UMAP, the pipeline effectively simplifies complex scRNA-seq datasets, facilitating the extraction of meaningful biological insights. 
+
+
 
 ### Aims:
 - Perform quality control of raw sequencing reads.
