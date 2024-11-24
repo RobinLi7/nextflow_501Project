@@ -1,0 +1,5 @@
+.nextflow/ 
+singularity_cache/ 
+tmp/ 
+work/
+.nfs000000009623013500002d9c
