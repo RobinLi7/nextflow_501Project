@@ -219,7 +219,16 @@ In addition to the results generated using the subset STAR index (chr1, chr2, ch
   - Visualizes the principal components of the data, showing variance explained by each component and how the cells cluster in this reduced-dimensional space.
     ![PCA](result_full_ref/pca_plot.png)
 
+---
 
+## Reference
+Certainly! Here are the formal references for the tools you've mentioned:
+
+1. Kaminow, B., Yunusov, D., & Dobin, A. (2021). STARsolo: accurate, fast and versatile mapping/quantification of single-cell and single-nucleus RNA-seq data. *bioRxiv*. https://doi.org/10.1101/2021.05.05.442755 
+2. Andrews, S. (2010). FastQC: A Quality Control tool for High Throughput Sequence Data. Available online: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ 
+3. Ewels, P., Magnusson, M., Lundin, S., & Käller, M. (2016). MultiQC: summarize analysis results for multiple tools and samples in a single report. *Bioinformatics*, 32(19), 3047–3048. https://doi.org/10.1093/bioinformatics/btw354 
+4. Dobin, A., Davis, C. A., Schlesinger, F., Drenkow, J., Zaleski, C., Jha, S., ... & Gingeras, T. R. (2013). STAR: ultrafast universal RNA-seq aligner. *Bioinformatics*, 29(1), 15–21. https://doi.org/10.1093/bioinformatics/bts635
+5. Hao, Y., Stuart, T., Kowalski, M. H., Choudhary, S., Hoffman, P., Hartman, A., ... & Satija, R. (2023). Dictionary learning for integrative, multimodal and scalable single-cell analysis. *Nature Biotechnology*. https://doi.org/10.1038/s41587-023-01767-y 
 
 
 
