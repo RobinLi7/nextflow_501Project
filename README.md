@@ -38,12 +38,7 @@ This pipeline is designed for single-cell RNA sequencing (scRNA-seq) data analys
    [Installation guide](https://docs.sylabs.io/guides/3.0/user-guide/installation.html)
    
 6. Download the reference genome files:
-   Use the `download` process or manually run:
-   ```bash
-   curl -L -o ref/CellRanger/3M-february-2018.txt.gz https://github.com/noamteyssier/10x_whitelist_mirror/raw/main/3M-february-2018.txt.gz
-   curl -L -o ref/chr1.fa.gz http://hgdownload.cse.ucsc.edu/goldenPath/hg38/chromosomes/chr1.fa.gz
-   ```
-   (Additional download commands included in the pipeline.)
+   There is a `download` process in my Nextflow pipeline that will handle the downloads automatically.
 
 ---
 
