@@ -1,11 +1,5 @@
 # nextflow_501Project
 
-Here’s a README file based on the Nextflow pipeline and your uploaded template:
-
----
-
-# README for Nextflow Pipeline
-
 ## Background and Rationale
 
 This pipeline is designed for single-cell RNA sequencing (scRNA-seq) data analysis. It leverages **FastQC**, **MultiQC**, **STARsolo**, and **Seurat** to process, analyze, and visualize scRNA-seq data. Key features include quality control, genome generation, mapping, and downstream clustering analysis with visualization.
