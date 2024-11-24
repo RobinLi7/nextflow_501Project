@@ -98,12 +98,12 @@ The pipeline processes **10x Genomics scRNA-seq data** and requires the followin
 ### 2. **Genome Files**
 The pipeline uses a subset of the human genome as a reference, specifically the chromosomes `chr1`, `chr2`, and `chr3`. These files include:
 - **FASTA Files**: Contain the nucleotide sequences for the reference genome. The required files are:
-  - `chr1.fa`: Sequence for chromosome 1.
-  - `chr2.fa`: Sequence for chromosome 2.
-  - `chr3.fa`: Sequence for chromosome 3.
+  - `ref/chr1.fa`: Sequence for chromosome 1.
+  - `ref/chr2.fa`: Sequence for chromosome 2.
+  - `ref/chr3.fa`: Sequence for chromosome 3.
 - **Annotation File (GTF)**: Provides functional annotations of genes, including their locations on the genome and exon structures.
-  - File used: `gencode.v38.annotation.gtf`.
-  - This file is filtered to include annotations only for `chr1`, `chr2`, and `chr3`.
+  - File used: `ref/gencode.v38.annotation.gtf`.
+  - This file is filtered to include annotations only for `chr1`, `chr2`, and `chr3` named `ref/chr1_chr2_chr3.gtf`.
 
 ### 3. **Barcode Whitelist**
 - A whitelist file is required for cell barcode validation during alignment. 
