@@ -208,6 +208,8 @@ The results in `result/` demonstrate the outputs of running the pipeline with th
 ## Output for FULL STAR index
 In addition to the results generated using the subset STAR index (chr1, chr2, chr3), the pipeline has been tested using the **full STAR genome index** to demonstrate its capability for comprehensive analysis. These results are stored in the directory `result_full_ref/` and reflect alignment and quantification based on the entire genome reference. 
 
+You can modify the 'download' process in 'nextflow_version.nf' to download all the chromosomes from 'hg38' instead of only downloading chromosomes 1, 2, and 3. Additionally, comment out the line for filtering the 'annotation.gtf' file in the 'prep_ref_dir' process and update the file name in the 'gen_Generate' process to achieve this.
+
 - **Quality Control** (`result_full_ref/multiQC_report.html`):
   - A HTML file that visualize base quality scores, GC content, sequence length distribution, sequence duplication levels, k-mer over-representation and contamination of primers and adapters in the input fastq.
 
