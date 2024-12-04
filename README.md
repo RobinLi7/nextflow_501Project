@@ -35,7 +35,7 @@ By integrating PCA and UMAP, the pipeline effectively simplifies complex scRNA-s
 - git
 - Nextflow (`=21.10.0`)
 - Singularity (`=3.5.2-1.1.el7`for containerized execution). \
-If you are using `BCGSC gphost08`, it is already built-in and available for containerized execution.
+If you are using `BCGSC gphost08`, Singularity (`=3.5.2-1.1.el7`) is already built-in and available for containerized execution.
 - Software dependencies included in containers:
   - **biocontainers/fastqc**
   - **ewels/multiqc**
