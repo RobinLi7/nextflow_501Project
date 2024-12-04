@@ -42,7 +42,7 @@ By integrating PCA and UMAP, the pipeline effectively simplifies complex scRNA-s
   - **satijalab/seurat**
 
 ### DAG
-![DAG](DAG.png)
+![DAG](DAG.pdf)
 
 #### **Input Data Preparation**
    - Accepts FASTQ files from 10x Genomics experiments, a barcode whitelist, and a reference genome.
